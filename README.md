@@ -40,6 +40,10 @@ A restful **JSON API** is provided at [API](http://nyx.vima.ekt.gr:3000) that ex
 3. Add loading state
 
 
+# About the repo
+
+It was created with create-react-app for a quicker development
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -56,4 +60,16 @@ You will also see any lint errors in the console.
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+# TO DO
+
+1. API Filtering
+  - display an Input box and a button. On entering text and filter return data that matches from the API
+
+2. Styling
+  - Use a styling framework (Material-UI possibly) and make the project look neat
+
+
+# What was challenging
+  - The most challenging part of this is unit testing. Haven't worked on it before, so it is a learning process. Got the gist of it,now it's time to learn.
 
