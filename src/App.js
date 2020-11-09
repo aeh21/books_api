@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import { Route, Switch } from "react-router-dom";
+import BooksPage from "./pages/BooksPage";
+import HomePage from "./pages/HomePage";
+import NotFoundPage from "./pages/404";
+import { ConnectedRouter } from "connected-react-router";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import { Provider } from "react-redux";
+import configureStore, { history } from "./store";
+
+const store = configureStore();
+
+class App extends Component {
+  render() {
+    return (
+      <Provider store={store}>
+        <ConnectedRouter history={history}>
+          <Switch>
+            <Route exact strict path="/" component={HomePage} />
+            <Route exact path="/books/page/:currentPage(\d+)" component={BooksPage}/>
+            <Route path="*" component={NotFoundPage} />
+          </Switch>
+        </ConnectedRouter>
+      </Provider>
+    );
+  }
 }
 
 export default App;
