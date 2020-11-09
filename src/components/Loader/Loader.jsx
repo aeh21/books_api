@@ -8,8 +8,9 @@ class Loader extends Component {
     return (
       <div
         className={cx('loader-container', styles.loaderContainer)}
+        data-testid="loader"
       >
-        <span className={cx('loader-animation', styles.loaderAnimation)} />
+        <span className={cx('loader-animation', styles.loaderAnimation)}>Loading...</span>
       </div>
     )
   }
