@@ -71,5 +71,5 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 
 # What was challenging
-  - The most challenging part of this is unit testing. Haven't worked on it before, so it is a learning process. Got the gist of it,now it's time to learn.
+  - The most challenging part of this is unit testing. Haven't worked on it before, so it is a learning process. Got the gist of it, now it's time to learn.
 
